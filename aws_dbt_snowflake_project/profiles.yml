@@ -1,0 +1,39 @@
+aws_dbt_snowflake_project:
+  outputs:
+    dev:
+      account: TXYZFHL-YA76553
+      database: AIRBNB
+      password: Snowflake@2025
+      role: ACCOUNTADMIN
+      schema: dbt_schema
+      threads: 2
+      type: snowflake
+      user: Snowpractice
+      warehouse: COMPUTE_WH
+  target: dev
+banking_dbt:
+  outputs:
+    dev:
+      account: ljb19080
+      database: banking
+      password: Snowflake@2025
+      role: ACCOUNTADMIN
+      schema: analytics
+      threads: 4
+      type: snowflake
+      user: SNOWUSER
+      warehouse: COMPUTE_WH
+  target: dev
+dbt_stocks:
+  outputs:
+    dev:
+      account: TXYZFHL-YA76553
+      database: STOCKS_MDS
+      password: Snowflake@2025
+      role: ACCOUNTADMIN
+      schema: COMMON
+      threads: 4
+      type: snowflake
+      user: Snowpractice
+      warehouse: COMPUTE_WH
+  target: dev
